@@ -11,36 +11,33 @@
             hint="The Word you want to translate"
             clearable
             prepend-inner-icon="mdi-text"
-            color="purple"
+            color="#42b883"
+            outlined
+            counter
           ></v-text-field>
 
-        <select
-          
-          v-model="language"
-          label="Choose The Language You Want To Translate To"
-        >
-        
-      <option value="ar">Arabic</option>
-      <option value="en">English</option>
-      <option value="am">Amharic</option>
-      <option value="es">Spanish</option>
-      <option value="it	">Italian</option>
-      <option value="fr">French</option>
-      <option value="de">German</option>
-      <option value="zh">Chinese</option>
-      <option value="ru">Russian</option>
-      <option value="pt">Portuguese</option>
-      <option value="hi">Hindi</option>
-      <option value="tr">Turkish</option>
-
-        </select>
+          <v-select
+            v-model="languages"
+            :hint="`You Chose --> ${languages.state}`"
+            :items="items"
+            item-text="state"
+            :item-value="abbr"
+            label="Choose a Language"
+            persistent-hint
+            return-object
+            single-line
+            prepend-inner-icon="mdi-earth"
+            color="#42b883"
+            filled
+            outlined
+          ></v-select>
 
           <v-btn
             type="submit"
             value="Translate"
             flat
             medium
-            color="purple"
+            color="#42b883"
             outlined
             rounded
           >Translate</v-btn>
@@ -59,19 +56,33 @@ export default {
   data() {
     return {
       textToTranslate: "",
-      language: ''
+      language: "",
+
+      languages: { state: "", abbr: "" },
+      items: [
+        { state: "Arabic", abbr: "ar" },
+        { state: "English", abbr: "en" },
+        { state: "Amharic", abbr: "am" },
+        { state: "Spanish", abbr: "es" },
+        { state: "Italian", abbr: "it" },
+        { state: "French", abbr: "fr" },
+        { state: "German", abbr: "de" },
+        { state: "Chinese", abbr: "zh" },
+        { state: "Russian", abbr: "ru" },
+        { state: "Portuguese", abbr: "pt" },
+        { state: "Hindi", abbr: "hi" },
+        { state: "Turkish", abbr: "tr" }
+      ]
     };
   },
 
-  created(){
-    this.language = 'en';
+  created() {
+    this.language = "en";
   },
 
   methods: {
-
-
     formSubmit(e) {
-      this.$emit('formSubmit', this.textToTranslate, this.language);
+      this.$emit("formSubmit", this.textToTranslate, this.languages.abbr);
       e.preventDefault();
     }
   }

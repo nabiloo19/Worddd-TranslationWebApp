@@ -1,25 +1,12 @@
 <template>
-  
-  
-      
-      <p class="display-3" >{{translatedText}}</p>
-   
-   
-   
-     
-  
-    
-  
+  <v-sheet elevation="6" class="pa-12 display-1" color="#f2f2f2">
+    <p>{{translatedText}}</p>
+  </v-sheet>
 </template>
 
 <script>
 export default {
   name: "TranslateOutput",
-
-  props:['translatedText']
-
-  
-
- 
+  props: ["translatedText"]
 };
 </script>
