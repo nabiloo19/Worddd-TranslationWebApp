@@ -1,24 +1,8 @@
 # worddd
 
-## Project setup
-```
-npm install
-```
+is a Vue JS Web Application that does Translation Services to more than 10 languages.
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+It supports PWA, so as to ease the accessibility by making it an application.
 
-### Compiles and minifies for production
-```
-npm run build
-```
+Although it functions as a PWA, translation services, for the time being, are ONLINE. So make sure you are connected to the Internet to send and recieve the translation.
 
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
