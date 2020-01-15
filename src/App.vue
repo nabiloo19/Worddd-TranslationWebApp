@@ -4,20 +4,21 @@
       app
       color="primary"
       dark
-    >
-      
-    </v-app-bar>
+    > </v-app-bar>
 
     <v-content>
-      <HelloWorld/>
+
+      <EntryMessages/>
       <TranslateForm v-on:formSubmit="tarnslateText" />
       <TranslateOutput />
+
     </v-content>
+
   </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
+import EntryMessages from './components/EntryMessages';
 import TranslateForm from './components/TranslateForm';
 import TranslateOutput from './components/TranslateOutput';
 
@@ -25,7 +26,7 @@ export default {
   name: 'App',
 
   components: {
-    HelloWorld,
+    EntryMessages,
     TranslateForm,
     TranslateOutput
   },
