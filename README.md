@@ -3,7 +3,7 @@
 
 is a Vue JS Web Application that does Translation Services to more than 10 languages.
 
-It used Vuetify as the front end and Yandix as the API for translation services.
+It uses Vuetify as the front end and Yandix as the API for translation services.
 
 Is hosted on Firebase [Check it out](https://worddd-webapp.firebaseapp.com)
 
