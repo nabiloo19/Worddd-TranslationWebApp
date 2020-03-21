@@ -7,6 +7,14 @@
 <script>
 export default {
   name: "TranslateOutput",
-  props: ["translatedText"]
+  props: ["translatedText"],
+  
+  data() {
+    return {
+      
+      
+      
+    };
+  },
 };
 </script>
